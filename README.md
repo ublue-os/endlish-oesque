@@ -1,32 +1,9 @@
-# beyond
+# endlish-oesque 
 
-[![release-please](https://github.com/ublue-os/beyond/actions/workflows/release-please.yml/badge.svg)](https://github.com/ublue-os/beyond/actions/workflows/release-please.yml)
-
-**What a GNOME OS could look like in the future—today**
-
-![Screenshot of Beyond overview](https://github.com/ublue-os/beyond/assets/611168/93a07df1-ac0a-4dff-b66b-9bebf58716ab) | ![Screenshot of Beyond desktop](https://github.com/ublue-os/beyond/assets/611168/f6ffac8a-6100-4ccc-8795-5b3b770ae6bd)
----|---
+[![release-please](https://github.com/ublue-os/endlish-oesque/actions/workflows/release-please.yml/badge.svg)](https://github.com/ublue-os/endlish-oesque/actions/workflows/release-please.yml)
 
 
-Beyond is an opinionated look at what an ideal GNOME-based OS would look like, from the perspective of [Cassidy James Blaede](https://cassidyjames.com).
 
-## Default Apps
-
-- **GNOME core apps from Flathub**—including upcoming hopeful inclusions—e.g. Calculator, Calendar, Characters, Clocks, Contacts, Document Viewer, Fonts, Loupe, Maps, Music, Nautilus Preview (Sushi), Videos, Weather, Web
-
-- **GNOME apps from Fedora** where there are gaps or it doesn't make sense from Flathub, e.g. Console, Disks, Files, Settings, Software, System Monitor
-
-## User Experience
-
-- **Stock GNOME** starting point as much as possible, e.g. default background, stylesheet, icons, window button positions, keyboard shortcuts
-
-- **GNOME design experiments** like experimental Activities button behavior, font changes, and more to come
-
-- **Dock** integrated as well as it can be into Shell since it’s the number one complaint I hear about GNOME from new users in the wild
-
-- **Default settings** tweaked very occasionally for accessibility, e.g. tap-to-click for touchpads
-
-- **Flathub included as a user remote** so each user can install their own apps without interfering with other users
 
 # Usage
 
