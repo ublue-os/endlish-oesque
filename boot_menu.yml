@@ -1,0 +1,11 @@
+ublue_variants:
+  - label: ublue-os/endlish-oesque
+    ks: /kickstart/ublue-os.ks
+    flavors:
+      - label: endlish-oesque
+        info: Endlish Oesque
+  - label: ublue-os/endlish-oesque-nvidia
+    ks: /kickstart/ublue-os-nvidia.ks
+    flavors:
+      - label: endlish-oesque-nvidia
+        info: Endlish Oesque (Nvidia)
