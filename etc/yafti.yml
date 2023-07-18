@@ -32,7 +32,7 @@ screens:
       package_manager: yafti.plugin.flatpak
       groups:
         Core:
-          description: GNOME Apps
+          description: Core Apps
           default: true
           packages:
           - Calculator:
@@ -45,6 +45,10 @@ screens:
               user: false
           - Characters:
               package: org.gnome.Characters
+              system: true
+              user: false
+          - Chromium:
+              package: org.chromium.Chromium
               system: true
               user: false
           - Clocks:
