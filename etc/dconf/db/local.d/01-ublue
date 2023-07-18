@@ -33,7 +33,7 @@ disabled=['org.gnome.clocks.desktop']
 enabled=['org.learningequality.Kolibri.desktop']
 
 # Enable the minimize and maximize buttons
-[org/gnome/desktop/wm/references]
+[org/gnome/desktop/wm/preferences]
 button-layout='appmenu:minimize,maximize,close'
 
 # Do not show the nonfree tags in GNOME Software nor the sources option/dialog
