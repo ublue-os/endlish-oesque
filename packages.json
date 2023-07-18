@@ -4,6 +4,7 @@
             "all": [
                 "gnome-console",
                 "gnome-shell-extension-dash-to-dock",
+                "lato-fonts",
                 "python3-pip"
             ]
         },

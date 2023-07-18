@@ -1,24 +1,76 @@
-[org/gnome/shell] 
-favorite-apps = ['org.gnome.Nautilus.desktop', 'org.gnome.Epiphany.desktop', 'org.gnome.Settings.desktop', 'org.gnome.Software.desktop']
-enabled-extensions = ['dash-to-dock@micxgx.gmail.com']
-
+# Default in Endless OS 5, plus a dark variant
 [org/gnome/desktop/background]
-picture-uri='file:///usr/share/backgrounds/gnome/adwaita-l.webp'
-picture-uri-dark='file:///usr/share/backgrounds/gnome/adwaita-d.webp'
+picture-uri='file:///usr/share/backgrounds/River_Surrounded_by_Mountains.jpg'
+picture-uri-dark='file:///usr/share/backgrounds/River_Surrounded_by_Mountains-dark.jpg'
+color-shading-type='vertical'
+picture-options='zoom'
+primary-color='#915349'
+secondary-color='#5d3e50'
 
+# Current Endless OS fonts
 [org/gnome/desktop/interface]
-font-name="Inter 11"
-document-font-name="Inter 11"
+font-name="Lato 12"
+document-font-name="Lato 12"
+overlay-scrolling=false
 
-[org/gnome/desktop/wm/preferences]
-titlebar-font="Inter 11"
+# Automatically play video DVDs; don't autostart for
+# x-content/ostree-repository since Software doesn't currently support it.
+[org/gnome/desktop/media-handling]
+autorun-x-content-start-app=['x-content/unix-software', 'x-content/video-dvd']
 
+# Set "default" touchpad click method which allows libinput to use quirks to
+# decide between left/right click "areas" (the default) and "fingers"
+# (multi-touch two and three finger clicks for Apple/Chromebook/etc behaviour),
+# and enable tap-to-click by default
 [org/gnome/desktop/peripherals/touchpad]
+click-method='default'
 tap-to-click=true
 
+# Override the order for default search providers
+[org/gnome/desktop/search-providers]
+sort-order=['org.gnome.Software.desktop', 'org.gnome.Calculator.desktop', 'com.endlessm.encyclopedia.ar.desktop', 'com.endlessm.encyclopedia.en.desktop', 'com.endlessm.encyclopedia.es.desktop', 'com.endlessm.encyclopedia.fr.desktop', 'com.endlessm.encyclopedia.id.desktop', 'com.endlessm.encyclopedia.pt.desktop', 'com.endlessm.encyclopedia.th.desktop', 'com.endlessm.encyclopedia.vi.desktop', 'org.gnome.Weather.desktop', 'org.gnome.Yelp.desktop']
+disabled=['org.gnome.clocks.desktop']
+enabled=['org.learningequality.Kolibri.desktop']
+
+# Enable the minimize and maximize buttons
+[org/gnome/desktop/wm/references]
+button-layout='appmenu:minimize,maximize,close'
+
+# Do not show the nonfree tags in GNOME Software nor the sources option/dialog
+# in its app menu; download the eos-extra.xml.gz as an external AppStream file.
+[org/gnome/software]
+show-nonfree-ui=false
+enable-repos-dialog=false
+external-appstream-system-wide=true
+external-appstream-urls=['https://appstream.endlessos.org/app-info/eos-extra.xml.gz']
+screenshot-cache-age-maximum=0
+
+# Always enable fractional scaling
 [org/gnome/mutter]
 experimental-features=['scale-monitor-framebuffer']
 
+[org/gnome/nautilus/preferences]
+default-folder-viewer='list-view'
+
+[org/gnome/settings-daemon/plugins/media-keys]
+# Ensure no conflicts with Ctrl+Alt+Del
+logout=[]
+max-screencast-length=0
+
+# Too aggressive by default
+[org/gnome/settings-daemon/plugins/power]
+ambient-enabled=false
+
+# Fixes unwanted rotation on some 2-in-1 models
+[org/gnome/settings-daemon/peripherals/touchscreen]
+orientation-lock=true
+
+[org/gnome/shell]
+always-show-log-out=true
+enabled-extensions = ['dash-to-dock@micxgx.gmail.com']
+favorite-apps = ['org.gnome.Software.desktop', 'org.chromium.Chromium.desktop', 'org.gnome.Nautilus.desktop']
+
+# Simple dock defaults, similar to that in Endless OS
 [org/gnome/shell/extensions/dash-to-dock]
 animation-time=0.15
 background-color='rgb(40,40,40)'
@@ -37,10 +89,15 @@ show-mounts=false
 show-trash=false
 transparency-mode='DYNAMIC'
 
+# Enable geoclue location services
+[org/gnome/system/location]
+enabled=true
+
+# On change of language, move home directories rather than copy,
+# without asking the user for confirmation
+[org/gnome/xdg-user-dirs]
+move-directories=true
+show-confirmation-dialog=false
+
 [org/gtk/gtk4/settings/file-chooser]
 sort-directories-first=true
-
-[org/gnome/shell/extensions/panel-corners]
-panel-corners=false
-scren-corner-radius=8
-screen-corners=true

@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Endlish Oesque First Boot Setup
+Comment=Set up apps
+Exec=/usr/bin/yafti /etc/yafti.yml
+Icon=/usr/share/icons/hicolor/scalable/apps/org.gnome.Settings.svg
+Type=Application
+Categories=Utility;System;

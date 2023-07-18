@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE wallpapers SYSTEM "gnome-wp-list.dtd">
+<wallpapers>
+  <wallpaper>
+    <name>River Surrounded by Mountains</name>
+    <filename>/usr/share/backgrounds/River_Surrounded_by_Mountains.jpg</filename>
+    <filename-dark>/usr/share/backgrounds/River_Surrounded_by_Mountains-dark.jpg</filename-dark>
+    <options>zoom</options>
+    <shade_type>vertical</shade_type>
+    <pcolor>#915349</pcolor>
+    <scolor>#5d3e50</scolor>
+  </wallpaper>
+</wallpapers>
