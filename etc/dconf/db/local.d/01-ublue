@@ -54,7 +54,7 @@ default-folder-viewer='list-view'
 
 [org/gnome/settings-daemon/plugins/media-keys]
 # Ensure no conflicts with Ctrl+Alt+Del
-logout=[]
+logout=@as []
 max-screencast-length=0
 
 # Too aggressive by default
