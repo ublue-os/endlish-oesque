@@ -2,12 +2,11 @@
 
 [![release-please](https://github.com/ublue-os/endlish-oesque/actions/workflows/release-please.yml/badge.svg)](https://github.com/ublue-os/endlish-oesque/actions/workflows/release-please.yml)
 
-
-
+An Endless-OS-Esque prototype image to see how far we can get.
 
 # Usage
 
-This is **highly experimental** at this stage! Settings and installed apps may change frequently until a 1.0 release.
+This is **highly experimental** and only intended as a prototype—I wouldn't recommend using it in production at all. 
 
 ## For existing Silverblue/Kinoite users
 
@@ -39,24 +38,24 @@ This is **highly experimental** at this stage! Settings and installed apps may c
 
    <details>
      <summary>AMD/Intel</summary>
-     <pre><code>sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/ublue-os/beyond:38</code></pre>
+     <pre><code>sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/ublue-os/endlish-oesque:38</code></pre>
    </details>
 
    <details>
      <summary>NVIDIA</summary>
-     <pre><code>sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/ublue-os/beyond-nvidia:38</code></pre>
+     <pre><code>sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/ublue-os/endlish-oesque-nvidia:38</code></pre>
    </details>
         
 2. Restart your computer
 
 ### Install extensions
 
-Beyond comes with some GNOME extensions to tailor the desktop experience. For now, **you must manually install them (https://github.com/ublue-os/beyond/issues/74)**.
+This image comes with some GNOME extensions to tailor the desktop experience. For now, **you must manually install them (https://github.com/ublue-os/beyond/issues/74)**.
 
 1. Open Console and run:
 
    ```shell
-   just install-beyond-extensions
+   just install-endlish-oesque-extensions
    ```
 
 2. Log out and back in (or restart your computer) to ensure the extensions are running
@@ -72,5 +71,5 @@ sudo rpm-ostree rebase fedora:fedora/38/x86_64/silverblue
 These images are signed with sigstore's [cosign](https://docs.sigstore.dev/cosign/overview/). You can verify the signature by downloading the `cosign.pub` key from this repo and running the following command:
 
 ```shell
-cosign verify --key cosign.pub ghcr.io/ublue-os/beyond
+cosign verify --key cosign.pub ghcr.io/ublue-os/endlish-oesque
 ```
