@@ -12,7 +12,6 @@ ARG FEDORA_MAJOR_VERSION="${FEDORA_MAJOR_VERSION}"
 COPY etc /etc
 COPY usr /usr
 
-ADD flatpaks /tmp/flatpaks
 ADD packages.json /tmp/packages.json
 ADD build.sh /tmp/build.sh
 
@@ -20,6 +19,9 @@ RUN /tmp/build.sh && \
     wget https://copr.fedorainfracloud.org/coprs/ublue-os/gnome-software/repo/fedora-${FEDORA_VERSION}/ublue-os-gnome-software-fedora-${FEDORA_VERSION}.repo -O /etc/yum.repos.d/ublue-os-gnome-software.repo && \
     rpm-ostree override replace --experimental --from repo=copr:copr.fedorainfracloud.org:ublue-os:gnome-software gnome-software gnome-software-rpm-ostree && \
     pip install --prefix=/usr yafti && \
+    cat /etc/flatpaks | while read line; do flatpak install --system --noninteractive --no-deploy flathub $line; done && \
+    systemctl unmask flatpak-system-install.service && \
+    systemctl enable flatpak-system-install.service && \
     systemctl unmask dconf-update.service && \
     systemctl enable dconf-update.service && \
     systemctl enable rpm-ostree-countme.service && \
