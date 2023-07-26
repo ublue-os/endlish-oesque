@@ -59,6 +59,8 @@ This is **highly experimental** and only intended as a prototype—I wouldn't re
      <summary>NVIDIA</summary>
      <pre><code>sudo rpm-ostree rebase ostree-image-signed:docker://ghcr.io/ublue-os/endlish-oesque-nvidia:38</code></pre>
    </details>
+        
+4. Restart your computer (again, yes)
 
 ### Install extensions
 
