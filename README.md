@@ -38,6 +38,20 @@ This is **highly experimental** and only intended as a prototype—I wouldn't re
 
    <details>
      <summary>AMD/Intel</summary>
+     <pre><code>sudo rpm-ostree rebase ostree-unverified-registry:docker://ghcr.io/ublue-os/endlish-oesque:38</code></pre>
+   </details>
+
+   <details>
+     <summary>NVIDIA</summary>
+     <pre><code>sudo rpm-ostree rebase ostree-unverified-registry:docker://ghcr.io/ublue-os/endlish-oesque-nvidia:38</code></pre>
+   </details>
+        
+2. Restart your computer
+
+3. Rebase onto a signed image (optional, but recommended), based on which type of GPU you use:
+
+   <details>
+     <summary>AMD/Intel</summary>
      <pre><code>sudo rpm-ostree rebase ostree-image-signed:docker://ghcr.io/ublue-os/endlish-oesque:38</code></pre>
    </details>
 
@@ -45,8 +59,6 @@ This is **highly experimental** and only intended as a prototype—I wouldn't re
      <summary>NVIDIA</summary>
      <pre><code>sudo rpm-ostree rebase ostree-image-signed:docker://ghcr.io/ublue-os/endlish-oesque-nvidia:38</code></pre>
    </details>
-        
-2. Restart your computer
 
 ### Install extensions
 
@@ -68,7 +80,9 @@ sudo rpm-ostree rebase fedora:fedora/38/x86_64/silverblue
 
 ## Verification
 
-These images are signed with sigstore's [cosign](https://docs.sigstore.dev/cosign/overview/). You can verify the signature by downloading the `cosign.pub` key from this repo and running the following command:
+These images are signed with sigstore's [cosign](https://docs.sigstore.dev/cosign/overview/). If you installed using `unverified-registry` ([Rebase](#rebase) step 1) and have **not** rebased using `ostree-image-signed` ([Rebase](#rebase) step 3), **we recommend rebasing following step 3 as it will verify signatures automatically.**
+
+You can also verify the signature manually; download the `cosign.pub` key from this repo and run the following command:
 
 ```shell
 cosign verify --key cosign.pub ghcr.io/ublue-os/endlish-oesque
