@@ -38,12 +38,12 @@ This is **highly experimental** and only intended as a prototype—I wouldn't re
 
    <details>
      <summary>AMD/Intel</summary>
-     <pre><code>sudo rpm-ostree rebase ostree-unverified-registry:docker://ghcr.io/ublue-os/endlish-oesque:38</code></pre>
+     <pre><code>sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/ublue-os/endlish-oesque:38</code></pre>
    </details>
 
    <details>
      <summary>NVIDIA</summary>
-     <pre><code>sudo rpm-ostree rebase ostree-unverified-registry:docker://ghcr.io/ublue-os/endlish-oesque-nvidia:38</code></pre>
+     <pre><code>sudo rpm-ostree rebase ostree-unverified-registry:ghcr.io/ublue-os/endlish-oesque-nvidia:38</code></pre>
    </details>
         
 2. Restart your computer
